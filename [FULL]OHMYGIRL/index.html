@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>7th mini album [Nonstop]</title>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/fullpage.css">
+	<link rel="stylesheet" href="css/font.css">
+	<link rel="stylesheet" href="css/colorbox.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.fullPage.js"></script>
+	<script src="js/jquery.colorbox-min.js"></script>
+	<script>
+		$(function(){
+			$("#fullpage").fullpage({
+				navigation:true,
+				navigationPosition:"right",
+				anchors:["a1st","a2st","a3st","a4st","a5st"],
+				afterLoad:function(anchorslink,index){
+					console.log(anchorslink+", "+index);
+					if(index==2){
+						$("#onviewOne").addClass("move");
+					}else{
+						$("#onviewOne").removeClass("move");
+					}
+					if(index==4){
+						$("#onViewFour").addClass("move");
+					}else{
+						$("#onViewFour").removeClass("move");
+					}
+				}
+			});
+			var i = 0;
+			$(".btn .next").click(function(){
+				i++;
+				if(i==9){i=0};
+				slideMove();
+			});
+			$(".btn .prev").click(function(){
+				i--;
+				if(i==-1){i=8};
+				slideMove();
+			})
+			function slideMove(){
+				var num = i * 354 * -1;
+				$(".photocard>ul").stop().animate({left:num},300);
+				console.log(i);
+				console.log(num);
+			};
+			$('a.colorBox').colorbox({
+				iframe:true,
+				innerWidth:1000,
+				innerHeight:600
+			});
+			$(".youtube").colorbox({
+				iframe:true,
+				innerWidth: 1280,
+				innerHeight:720
+			});
+			$(".card>ul>li").click(function(){
+				var x=$(this).index();
+				$(".cardbody").hide();
+				$(".cardbody").show().find("div.view").eq(x).fadeIn();
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="fullpage">
+		<section class="section" id="page1" data-anchor="a1st">
+			<video id="intro-MV" data-autoplay loop muted poster="images/bg-pg1.jpg">
+				<source src="nonstop-3840.mp4" type="video/mp4">
+			</video>					
+		</section>
+		<section class="section" id="page2" data-anchor="a2st">
+			<div class="main" id="onviewOne">
+				<div class="card">
+					<ul class="clearfix">
+						<li class="profile">
+							<img src="images/page2-01.jpg" alt="아티스트프로필">
+						</li>
+						<li class="album">
+							<img src="images/page2-02.jpg" alt="앨범소개">
+						</li>
+						<li class="highlight">
+							<a href="https://youtu.be/obesWjbPUo0" target="_blank"><img src="images/page2-03.jpg" alt="하이라이트"></a>
+						</li>
+					</ul>
+				</div>			
+			</div>
+			<div class="cardbody">
+				<div class="bdProfile view">
+					<div class="logo">
+						<img src="images/logo-profile.png" alt="">
+					</div>
+					<div class="board">
+						<table width="190" height="230">
+							<tr>
+								<td width="230" height="190"><img src="images/pro01.jpg" alt=""></td>
+								<td  colspan="5" rowspan="2"><img src="images/pro02.jpg" alt=""></td>
+								<td class="w230 h190"><img src="images/pro03.jpg" alt=""></td>
+							</tr>	
+							<tr>
+								<td width="230" height="190"><img src="images/pro04.jpg" alt=""></td>
+								<td width="230" height="190"><img src="images/pro05.jpg" alt=""></td>			
+							</tr>
+							<tr>
+								<td><img src="images/pro06.jpg" alt=""></td>
+								<td><img src="images/pro07.jpg" alt=""></td>
+								<td><img src="images/pro08.jpg" alt=""></td>
+								<td><img src="images/pro09.jpg" alt=""></td>
+								<td><img src="images/pro10.jpg" alt=""></td>
+								<td><img src="images/pro11.jpg" alt=""></td>
+								<td><img src="images/pro12.jpg" alt=""></td>
+							</tr>
+						</table>
+						<div class="deco">
+							<img src="images/profile-bear.png" alt="">
+						</div>
+						<div class="decodice1">
+							<img src="images/dice1.png" alt="" class="dice01">
+						</div>
+						<div class="decodice2">
+							<img src="images/dice2.png" alt="" class="dice01">
+						</div>
+					</div> <!-- board -->
+					<div class="reset">
+						<ul>
+							<li class="icon-home">
+								
+							</li>
+							<li class="icon-profile active">
+								
+							</li>
+							<li class="icon-album">
+								
+							</li>
+							<li class="icon-link">
+								
+							</li>
+						</ul>
+					</div>	
+				</div> <!-- bfprofile -->
+				<div class="album view">
+					<div class="logo">
+						<img src="images/logo-nonstop3.png" alt="">
+					</div>
+					<div class="txtWrap">
+						<div class="albumart">
+							<img src="images/nonstop.jpg" alt="">
+						</div>
+						<div class="txtcontent">
+							<h3>오마이걸, 7집 미니 앨범 [NONSTOP] 발매<br> 감성 코칭 보드게임 속 설레는 속마음 여행 [NONSTOP]</h3>
+							<p class="detail">“NONSTOP 게임”은 놀이판에 있는 다양한 장소들을 거쳐가며 “NONSTOP” 존을 가장 먼저 통과 하는 사람이 이기는 감정 코칭 보드게임입니다. 이 보드게임은 무인도에 빠졌을 때 주사위 두개가 같은 숫자가 나와야 탈출 할 수 있습니다. 단, 무인도에 빠지면 자신도 모르사이 설렘이라는 감정에 휘말릴 수 있으므로 주의해야 합니다.당신은 안전존인 FRIEND ZONE으로 가시겠습니까? 아니면 무인도로 가시겠습니까?”</p>
+							<strong>Track List</strong>
+							<p>01 살짝 설렜어(Nonstop)</p>
+							<p>02 Dolphin</p>
+							<p>03 꽃차(Flower Tea)</p>
+							<p>04 NE♡N</p>
+							<p>05 Krystal</p>
+						</div>
+						<div class="deco">
+							<img src="images/album-bear.png" alt="">
+						</div>
+					</div>
+					<div class="reset">
+						<ul>
+							<li class="icon-home">
+								
+							</li>
+							<li class="icon-profile">
+								
+							</li>
+							<li class="icon-album active">
+								
+							</li>
+							<li class="icon-link">
+								
+							</li>
+						</ul>
+					</div>
+				</div>	
+			</div> <!-- main -->			
+		</section>
+		<section class="section" id="page3" data-anchor="a3st">
+			<div class="box"></div>
+			<div class="ladder">
+				<img src="images/ladder.png" alt="">
+			</div>
+			<div class="pad"><a href="https://www.youtube.com/embed/iDjQSdN_ig8" target="_blank"></a>
+				<div class="mvimg">
+					<div class="bk"></div>
+					<img src="images/mv.gif" alt="">
+				</div>
+				<img src="images/pad.png" alt="" class="padimg">
+			</a></div>
+			<div class="deco">	
+				<div class="cloud">
+					<img src="images/cloud.png" alt="">
+				</div>
+				<div class="movingimg">
+					<img src="images/bear.png" alt="">
+				</div>
+			</div>
+			<div class="title">
+				영상을 클릭하면 유투브로 연결됩니다.
+			</div>
+		</section>
+		<section class="section" id="page4" data-anchor="a4st">
+			<div class="logo">
+				<img src="images/logo-nonstop.png" alt="">
+			</div>
+			<div class="content clearfix" id="onViewFour">
+				<div class="bodyleft">
+					<div class="title">
+						<img src="images/title-phoca.png" alt="">
+					</div>
+					<p>‘CHACE’ ver ‘QUEST’ ver 멤버별 컨셉 포토를 확인하세요.</p>
+					<div class="btn clearfix">
+						<div class="prev">
+							<img src="images/prev.png" alt="">
+						</div>
+						<div class="next">
+							<img src="images/next.png" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="photocard">
+					<ul class="clearfix">
+						<li class="phocaOne">
+							<img src="images/phoca01.jpg" alt="">
+							<div class="hoverimg">
+								<img src="images/artist01.jpg" alt="">
+							</div>
+						</li>
+						<li class="phocaTwo">
+							<img src="images/phoca02.jpg" alt="">
+							<div class="hoverimg">
+								<img src="images/artist02.jpg" alt="">
+							</div>
+						</li>
+						<li class="phocaOne">
+							<img src="images/phoca01.jpg" alt="">
+							<div class="hoverimg">
+								<img src="images/artist03.jpg" alt="">
+							</div>
+						</li>
+						<li class="phocaTwo">
+							<img src="images/phoca02.jpg" alt="">
+							<div class="hoverimg">
+								<img src="images/artist04.jpg" alt="">
+							</div>
+						</li>
+						<li class="phocaOne">
+							<img src="images/phoca01.jpg" alt="">
+							<div class="hoverimg">
+								<img src="images/artist05.jpg" alt="">
+							</div>
+						</li>
+						<li class="phocaTwo">
+							<img src="images/phoca02.jpg" alt="">
+							<div class="hoverimg">
+								<img src="images/artist06.jpg" alt="">
+							</div>
+						</li>
+						<li  class="phocaOne">
+							<img src="images/phoca01.jpg" alt="">
+							<div class="hoverimg">
+								<img src="images/artist07.jpg" alt="">
+							</div>
+						</li>
+						<li class="phocaTwo">
+							<img src="images/phoca01.jpg" alt="">
+							<div class="hoverimg">
+								<img src="images/artist08.jpg" alt="">
+							</div>
+						</li>
+						<li class="phocaOne">
+							<img src="images/phoca02.jpg" alt="">
+							<div class="hoverimg">
+								<img src="images/artist09.jpg" alt="">
+							</div>
+						</li>
+						<li class="phocaTwo">
+							<img src="images/phoca01.jpg" alt="">
+							<div class="hoverimg">
+								<img src="images/artist10.jpg" alt="">
+							</div>
+						</li>
+						<li class="phocaOne">
+							<img src="images/phoca02.jpg" alt="">
+							<div class="hoverimg">
+								<img src="images/artist11.jpg" alt="">
+							</div>
+						</li>
+						<li class="phocaTwo">
+							<img src="images/phoca01.jpg" alt="">
+							<div class="hoverimg">
+								<img src="images/artist12.jpg" alt="">
+							</div>
+						</li>
+					</ul>
+				</div>		
+			</div>
+		</section>
+		<section class="section" id="page5" data-anchor="a5st">
+			<div class="box">
+				<img src="images/bg-pg5.jpg" alt="">
+			</div>
+			<div class="logo">
+				<img src="images/logo-nonstop2.png" alt="">
+			</div>
+			<div class="event">
+				<ul class="clearfix">
+					<li><a href="eventpopup02.html" class="colorBox">
+						<img src="images/event01.png" alt="">
+						<div class="eventhover">
+							<p>이벤트<br>상세내용</p>
+						</div>
+					</a></li>
+					<li><a href="https://youtu.be/obesWjbPUo0" class="youtube">
+						<img src="images/event02.png" alt="">
+						<div class="eventhover">
+							<p>뮤직비디오<br>보러가기</p>
+						</div>
+					</a></li>
+					<li><a href="eventpopup01.html" class="colorBox">
+						<img src="images/event03.png" alt="">
+						<div class="eventhover">
+							<p>이벤트<br>상세내용</p>
+						</div>
+					</a></li>
+					<li><a href="eventpopup.html" class="colorBox">
+						<img src="images/event04.png" alt="">
+						<div class="eventhover">
+							<p>이벤트<br>상세내용</p>
+						</div>
+					</a></li>
+				</ul>
+			</div>
+		</section>
+	</div>
+</body>
+</html>
