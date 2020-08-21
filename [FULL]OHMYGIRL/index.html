@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="css/fullpage.css">
 	<link rel="stylesheet" href="css/font.css">
 	<link rel="stylesheet" href="css/colorbox.css">
+	<link rel="stylesheet" href="css/all.css">
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/jquery.fullPage.js"></script>
 	<script src="js/jquery.colorbox-min.js"></script>
@@ -60,11 +61,6 @@
 				innerWidth: 1280,
 				innerHeight:720
 			});
-			$(".card>ul>li").click(function(){
-				var x=$(this).index();
-				$(".cardbody").hide();
-				$(".cardbody").show().find("div.view").eq(x).fadeIn();
-			});
 		});
 	</script>
 </head>
@@ -79,111 +75,19 @@
 			<div class="main" id="onviewOne">
 				<div class="card">
 					<ul class="clearfix">
-						<li class="profile">
+						<li class="profile"><a href="profile.html">
 							<img src="images/page2-01.jpg" alt="아티스트프로필">
-						</li>
-						<li class="album">
+						</a></li>
+						<li class="album"><a href="album.html">
 							<img src="images/page2-02.jpg" alt="앨범소개">
 						</li>
 						<li class="highlight">
-							<a href="https://youtu.be/obesWjbPUo0" target="_blank"><img src="images/page2-03.jpg" alt="하이라이트"></a>
-						</li>
+							<a href="https://www.youtube.com/embed/obesWjbPUo0" class="youtube"><img src="images/page2-03.jpg" alt="하이라이트"></a>
+						</a></li>
 					</ul>
 				</div>			
 			</div>
-			<div class="cardbody">
-				<div class="bdProfile view">
-					<div class="logo">
-						<img src="images/logo-profile.png" alt="">
-					</div>
-					<div class="board">
-						<table width="190" height="230">
-							<tr>
-								<td width="230" height="190"><img src="images/pro01.jpg" alt=""></td>
-								<td  colspan="5" rowspan="2"><img src="images/pro02.jpg" alt=""></td>
-								<td class="w230 h190"><img src="images/pro03.jpg" alt=""></td>
-							</tr>	
-							<tr>
-								<td width="230" height="190"><img src="images/pro04.jpg" alt=""></td>
-								<td width="230" height="190"><img src="images/pro05.jpg" alt=""></td>			
-							</tr>
-							<tr>
-								<td><img src="images/pro06.jpg" alt=""></td>
-								<td><img src="images/pro07.jpg" alt=""></td>
-								<td><img src="images/pro08.jpg" alt=""></td>
-								<td><img src="images/pro09.jpg" alt=""></td>
-								<td><img src="images/pro10.jpg" alt=""></td>
-								<td><img src="images/pro11.jpg" alt=""></td>
-								<td><img src="images/pro12.jpg" alt=""></td>
-							</tr>
-						</table>
-						<div class="deco">
-							<img src="images/profile-bear.png" alt="">
-						</div>
-						<div class="decodice1">
-							<img src="images/dice1.png" alt="" class="dice01">
-						</div>
-						<div class="decodice2">
-							<img src="images/dice2.png" alt="" class="dice01">
-						</div>
-					</div> <!-- board -->
-					<div class="reset">
-						<ul>
-							<li class="icon-home">
-								
-							</li>
-							<li class="icon-profile active">
-								
-							</li>
-							<li class="icon-album">
-								
-							</li>
-							<li class="icon-link">
-								
-							</li>
-						</ul>
-					</div>	
-				</div> <!-- bfprofile -->
-				<div class="album view">
-					<div class="logo">
-						<img src="images/logo-nonstop3.png" alt="">
-					</div>
-					<div class="txtWrap">
-						<div class="albumart">
-							<img src="images/nonstop.jpg" alt="">
-						</div>
-						<div class="txtcontent">
-							<h3>오마이걸, 7집 미니 앨범 [NONSTOP] 발매<br> 감성 코칭 보드게임 속 설레는 속마음 여행 [NONSTOP]</h3>
-							<p class="detail">“NONSTOP 게임”은 놀이판에 있는 다양한 장소들을 거쳐가며 “NONSTOP” 존을 가장 먼저 통과 하는 사람이 이기는 감정 코칭 보드게임입니다. 이 보드게임은 무인도에 빠졌을 때 주사위 두개가 같은 숫자가 나와야 탈출 할 수 있습니다. 단, 무인도에 빠지면 자신도 모르사이 설렘이라는 감정에 휘말릴 수 있으므로 주의해야 합니다.당신은 안전존인 FRIEND ZONE으로 가시겠습니까? 아니면 무인도로 가시겠습니까?”</p>
-							<strong>Track List</strong>
-							<p>01 살짝 설렜어(Nonstop)</p>
-							<p>02 Dolphin</p>
-							<p>03 꽃차(Flower Tea)</p>
-							<p>04 NE♡N</p>
-							<p>05 Krystal</p>
-						</div>
-						<div class="deco">
-							<img src="images/album-bear.png" alt="">
-						</div>
-					</div>
-					<div class="reset">
-						<ul>
-							<li class="icon-home">
-								
-							</li>
-							<li class="icon-profile">
-								
-							</li>
-							<li class="icon-album active">
-								
-							</li>
-							<li class="icon-link">
-								
-							</li>
-						</ul>
-					</div>
-				</div>	
-			</div> <!-- main -->			
+		</div> <!-- main -->			
 		</section>
 		<section class="section" id="page3" data-anchor="a3st">
 			<div class="box"></div>

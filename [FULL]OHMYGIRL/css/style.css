@@ -53,18 +53,19 @@ body{
 	#page2 .cardbody div.bdProfile{display: none;}
 	#page2 .cardbody div.album{display: none;}
 
-	/*profile*/
-	#page2 .bdProfile{width: 100%;height: 100%;background: #f3b0bb;}
-	#page2 .bdProfile .logo{
+	/*pageProfile*/
+
+	#pageProfile .bdProfile{width: 100%;height: 100%;background: #f3b0bb;}
+	#pageProfile .bdProfile .logo{
 		width: 472px;padding-top: 90px;margin: 0 auto;margin-bottom:85px; 
 	}
-	#page2 .board{width: 1407px;margin: 0 auto;position: relative;}
-	#page2 table{border-collapse: collapse;}
-	#page2 .bdProfile .deco{
+	#pageProfile .board{width: 1407px;margin: 0 auto;position: relative;}
+	#pageProfile table{border-collapse: collapse;}
+	#pageProfile .bdProfile .deco{
 		position: absolute;right: 120px;top: 0;
 		animation:bearMove 0.8s infinite alternate;
 	}
-	#page2 .bdProfile .deco.active{background: #f3b0bb;}
+	#pageProfile .bdProfile .deco.active{background: #f3b0bb;}
 	@keyframes bearMove{
 		from{transform: translateY(30px);}
 		to{transform: translateY(0);}
@@ -73,72 +74,89 @@ body{
 		animation: rolling 6s linear infinite;
     	content:'';
  }
-	#page2 .bdProfile .decodice1{
+	#pageProfile .bdProfile .decodice1{
 		position: absolute;top: 170px;left: 670px;
 		
 	}
-	#page2 .bdProfile .decodice2{
+	#pageProfile .bdProfile .decodice2{
 		position: absolute;top: 130px;left: 540px;
 		animation: rolling 6s linear infinite;
 	}
-	@keyframes rolling {
-     0% {content:'\2680';}
-     20% {content:'\2681';}
-     40% {content:'\2682';}
-     60% {content:'\2683';}
-     80% {content:'\2684';}
-     100% {content:'\2685';}
-	}
 
 	/*album*/
-	#page2 .album{
+	#pagealbum .album{
 		width: 100%;height: 100%;
 		background-image: url(../images/bg-album.jpg);
 	}
-	#page2 .album .logo{
+	#pagealbum .album .logo{
 		width: 463px;margin: 0 auto;
 		padding-top: 90px;margin-bottom: 65px;
 	}
-	#page2 .album .txtWrap{
+	#pagealbum .album .txtWrap{
 		width: 1410px;height:650px;background: #fff;margin: 0 auto;
 		padding:90px;position: relative;
 	}
-	#page2 .album .albumart,
-	#page2 .album .txtcontent{float: left;}
+	#pagealbum .album .albumart,
+	#pagealbum .album .txtcontent{float: left;}
 
-	#page2 .album .albumart{width: 464px;}
-	#page2 .album .txtcontent{width: 700px;padding-left:90px;}
-	#page2 .album .txtcontent h3{
+	#pagealbum .album .albumart{width: 464px;}
+	#pagealbum .album .txtcontent{width: 700px;padding-left:90px;}
+	#pagealbum .album .txtcontent h3{
 		font-size:20px;font-family: 'S-CoreDream-5Medium';
 		margin-bottom: 50px;
 	}
-	#page2 .album .txtcontent p.detail{
+	#pagealbum .album .txtcontent p.detail{
 		font-family: 'S-CoreDream-5Medium';
 		margin-bottom: 45px;line-height: 30px;
 	}
-	#page2 .album .txtcontent strong{
+	#pagealbum .album .txtcontent strong{
 		display: inline-block;
 		font-size:20px;font-family: 'S-CoreDream-7ExtraBold';
 		margin-bottom: 20px;
 	}
-	#page2 .album .txtcontent p{font-family: 'Noto Sans KR', sans-serif;}
-	#page2 .album .deco{
+	#pagealbum .album .txtcontent p{font-family: 'Noto Sans KR', sans-serif;}
+	#pagealbum .album .deco{
 		position: absolute;bottom: 0;right: 5%;
 		animation:bearMove 0.8s infinite alternate;
 	}
 
 /*reset*/
-	#page2 .reset{
+	.view .reset{
 		position: absolute; right: 180px; top: 280px;
 	}
+	.view li{width: 100px;position: relative;}
 
-	#page2 .reset li{
+	.view .reset .circle{
 		width: 35px;height: 35px;border: 2px solid #f6e136;
 		border-radius: 50%;margin-bottom: 15px;
+		transition:.3s;
 	}
-	#page2 .reset li.active{
+	.view .hover{
+		display: none;
+		color:#601a08;font-family: 'S-CoreDream-7ExtraBold';
+		position: absolute;top:5.5px;left: 40px;
+	}
+	.view .hover.w150{width: 150px !important;}
+	.view i{
+		width: 35px;color:#f6e136;font-size:20px;
+		position: absolute;top: 8px;left: 8px;
+	}
+
+	.view .reset li:hover .hover{display: block;color:#f6e136;}
+	.view .reset li:hover .circle{
+		width: 100%;height: 35px;border-radius:20px;	
+	}
+	.view .reset li:hover .circle.long{
+		width: 180px;height: 35px;border-radius:20px;	
+	}
+
+	.view .reset .circle.active{
+		width: 100%;height: 35px;border-radius:20px;
 		background: #f6e136;
 	}
+	.view .reset .circle.active .hover{display: block;color:#601a08;}
+	.view .reset .circle.active i{color:#601a08;}
+	
 
 /*page3*/
 #page3{background: #f397a5;position: relative;}
