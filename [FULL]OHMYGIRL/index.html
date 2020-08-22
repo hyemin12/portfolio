@@ -3,6 +3,7 @@
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>7th mini album [Nonstop]</title>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/reset.css">
@@ -42,7 +43,7 @@
 			});
 			$(".btn .prev").click(function(){
 				i--;
-				if(i==-1){i=8};
+				if(i==-1){i=9};
 				slideMove();
 			})
 			function slideMove(){
@@ -75,29 +76,28 @@
 			<div class="main" id="onviewOne">
 				<div class="card">
 					<ul class="clearfix">
-						<li class="profile"><a href="profile.html">
+						<li class="profile"><a href="profile2.html">
 							<img src="images/page2-01.jpg" alt="아티스트프로필">
 						</a></li>
 						<li class="album"><a href="album.html">
 							<img src="images/page2-02.jpg" alt="앨범소개">
-						</li>
+						</a></li>
 						<li class="highlight">
-							<a href="https://www.youtube.com/embed/obesWjbPUo0" class="youtube"><img src="images/page2-03.jpg" alt="하이라이트"></a>
+							<a href="https://www.youtube.com/embed/obesWjbPUo0" class="youtube"><img src="images/page2-03.jpg" alt="하이라이트">
 						</a></li>
 					</ul>
 				</div>			
-			</div>
-		</div> <!-- main -->			
+			</div> <!-- main -->			
 		</section>
 		<section class="section" id="page3" data-anchor="a3st">
 			<div class="box"></div>
 			<div class="ladder">
 				<img src="images/ladder.png" alt="">
 			</div>
-			<div class="pad"><a href="https://www.youtube.com/embed/iDjQSdN_ig8" target="_blank"></a>
+			<div class="pad"><a href="https://www.youtube.com/embed/iDjQSdN_ig8" target="_blank">
 				<div class="mvimg">
 					<div class="bk"></div>
-					<img src="images/mv.gif" alt="">
+					<img src="images/mv.gif" alt="" class="mv-img">
 				</div>
 				<img src="images/pad.png" alt="" class="padimg">
 			</a></div>
@@ -109,9 +109,8 @@
 					<img src="images/bear.png" alt="">
 				</div>
 			</div>
-			<div class="title">
-				영상을 클릭하면 유투브로 연결됩니다.
-			</div>
+			<div class="logo"></div>
+			<div class="title">영상을 클릭하면 유투브로 연결됩니다.</div>
 		</section>
 		<section class="section" id="page4" data-anchor="a4st">
 			<div class="logo">
