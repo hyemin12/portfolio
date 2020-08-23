@@ -55,175 +55,28 @@ body{
 	#page2 .card li a{line-height: 180px;}
 	#page2 .card li img{display: none;}
 
+
 	/*pageProfile*/
+	#pageProfile{background-color: #594a9b;}
 	#pageProfile .bdProfile{
-		width: 100%;height: 100%;background: #f3b0bb;
-		overflow:hidden;
-	}
-	#pageProfile .bdProfile .logo{
-		width: 472px;padding-top: 90px;margin: 0 auto;
-		margin-bottom:50px; transform:scale(0.8);
-	}
-	#pageProfile .deco{
-		width: 180px;
-		position: absolute;right: 300px;top: 0px;
-		animation:bearMove 0.8s infinite alternate;
-	}
-	#pageProfile .deco img{width: 100%;}
-	#pageProfile .bdProfile .deco.active{background: #f3b0bb;}
-	@keyframes bearMove{
-		from{transform: translateY(30px);}
-		to{transform: translateY(0);}
-	}
-
-	#pageProfile .bdProfile .decodice1{
-		position: absolute;top: 140px;left: 670px;
-		
-	}
-	#pageProfile .bdProfile .decodice2{
-		position: absolute;top: 105px;left: 570px;
-		animation: rolling 6s linear infinite;
-	}
-	#pageProfile ul.table{
-		width: 1200px;height: 520px;margin: 0 auto;
-		position: relative;
-	}
-	#pageProfile .table li{
-		float: left; width: 159.6px;overflow:hidden;
-		position: relative;transition:.3s;
-		
-	}
-	#pageProfile .table li img{width: 100%;transition:.3s}
-	#pageProfile .table li.tr{width: 194px !important;height: 158px !important;}
-	#pageProfile .table li.side{width: 798px !important;height: 316px !important;}
-	#pageProfile .table li.rec{width: 194px !important;height:194px !important;}
-	#pageProfile .table li.td{position: absolute;top: 158px;}
-
-
-	#pageProfile .table li:hover img{transform:scale(1.1);}
-	#pageProfile .table li:hover .click,
-	#pageProfile .table li:hover .click2,
-	#pageProfile .table li:hover .click3{display: block;opacity: 1;}
-	#pageProfile .table li:nth-child(2):hover img{transform:scale(1);}
-	#pageProfile .click p{
-		width: 120px;color:#fff;
-		position: absolute;left: 50%;top: 50%;		
+		width: 100%;
+		background-image: url(../images/text.png) no-repeat center;
+		position: absolute;left: 50%;top: 50%;
 		transform:translate(-50%,-50%);
-	}
-	#pageProfile .click{
-		width: 194px;height: 159.6px;
-		background-color:rgb(0,0,0,0.6);color:#fff;
-		text-align: center;
-		position: absolute;top: 0;left: 0;
-		opacity: 0;
-	}
-	#pageProfile .click2{
-		width: 159.6px;height: 194px;
-		background-color:rgb(0,0,0,0.6);color:#fff;
-		text-align: center;line-height: 194px;
-		position: absolute;top: 0;left: 0;
-		opacity: 0;
-	}
-	#pageProfile .click3{
-		width: 194px;height: 194px;
-		background-color:rgb(0,0,0,0.6);color:#fff;
-		text-align: center;
-		position: absolute;top: 0;left: 0;
-		opacity: 0;
-	}
-	#pageProfile .click a{
-		display: block;color:#fff;
 	}
 	
-	#glayLayer{
-		width: 100%;height: 100%;background: #000;
-		position: fixed;top: 0;left: 0;
-		opacity:0.6;
-		display: none;
-	}
-	#overLayer{
-		position: fixed;top: 50%;left: 50%;
-		transform:translate(-50%,-50%);
-		display: none;
-	}
-
 	/*album*/
-	#pagealbum .album{
-		width: 100%;height: 100%;
-		background-image: url(../images/bg-album.jpg);
-		overflow:hidden;
+	#pagealbum .bdProfile{background-color: #594a9b;}
+	#pagealbum{
+		width: 100%;
+		background-image: url(../images/text.png) no-repeat center;
+		position: absolute;left: 50%;top: 50%;
+		transform:translate(-50%,-50%);
 	}
-	#pagealbum .album .logo{
-		width:440px;margin: 0 auto;
-		padding-top: 90px;margin-bottom: 65px;
-	}
-	#pagealbum .album .logo img{width: 100%;}
-	#pagealbum .album .txtWrap{
-		width: 1150px;height:470px;background: #fff;margin: 0 auto;
-		padding:50px;position: relative;
-	}
-	#pagealbum .album .albumart,
-	#pagealbum .album .txtcontent{float: left;}
-
-	#pagealbum .album .albumart{width: 400px;}
-	#pagealbum .album .albumart img{width: 100%;}
-	#pagealbum .album .txtcontent{width: 600px;padding-left:50px;}
-	#pagealbum .album .txtcontent h3{
-		font-size:18px;font-family: 'S-CoreDream-5Medium';
-		margin-bottom: 40px;
-	}
-	#pagealbum .album .txtcontent p.detail{
-		font-size:14px;
-		font-family: 'S-CoreDream-5Medium';
-		margin-bottom: 45px;
-	}
-	#pagealbum .album .txtcontent strong{
-		display: inline-block;
-		font-size:18px;font-family: 'S-CoreDream-7ExtraBold';
-		margin-bottom: 20px;
-	}
-	#pagealbum .album .txtcontent p{font-family: 'Noto Sans KR', sans-serif;}
-	#pagealbum .album .deco{
-		position: absolute;bottom: -10px;right: 0;
-		animation:bearMove 0.8s infinite alternate;
-	}
+	
 
 /*reset*/
-	.view .reset{
-		position: absolute; right: 70px; top: 280px;
-		transform:scale(0.9);
-	}
-	.view li{width: 100px;position: relative;}
-
-	.view .reset .circle{
-		width: 35px;height: 35px;border: 2px solid #f6e136;
-		border-radius: 50%;margin-bottom: 15px;
-		transition:.3s;
-	}
-	.view .hover{
-		display: none;
-		color:#601a08;font-family: 'S-CoreDream-7ExtraBold';
-		position: absolute;top:5.5px;left: 40px;
-	}
-	.view i{
-		width: 35px;color:#f6e136;font-size:20px;
-		position: absolute;top: 8px;left: 8px;
-	}
-
-	.view .reset li:hover .hover{display: block;color:#f6e136;}
-	.view .reset li:hover .circle{
-		width: 100%;height: 35px;border-radius:20px;
-	}
-	.view .reset li:hover .circle.long{
-		width: 120px;height: 58px;border-radius:20px;	
-	}
-
-	.view .reset .circle.active{
-		width: 100%;height: 35px;border-radius:20px;
-		background: #f6e136;
-	}
-	.view .reset .circle.active .hover{display: block;color:#601a08;}
-	.view .reset .circle.active i{color:#601a08;}
+	.view .reset{display: none;}
 	
 
 /*page3*/
