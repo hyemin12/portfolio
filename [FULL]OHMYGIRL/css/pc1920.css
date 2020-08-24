@@ -20,8 +20,23 @@ body{
 #onViewFour.move{top: 0;opacity:1;}
 
 /*page1*/
-#page1{background-image: url(../images/bg-pg1.jpg);position: relative;}
-#intro-MV{position: absolute;width: 100%;height: 100%;object-fit: cover;top:0;}
+#page1{width: 100%;height: 100%;overflow: hidden;position: relative;}
+#page1 #intro-MV{
+	width:100%;
+	position: absolute;top:00px;
+	object-fit: cover;
+	
+}
+#page1 .bgpage1{width: 100%;position:relative;z-index: 1;}
+#page1 .bgpage1 img{width: 100%;}
+
+#page1 .time{
+	color:#765892;
+	font-family: 'S-CoreDream-7ExtraBold';font-size:25px;
+	position: absolute;bottom: 140px;right: 7%;
+	z-index: 2;
+}
+
 
 /*page2*/
 #page2{background-image: url(../images/bg-pg2.jpg);position: relative;}
@@ -198,6 +213,7 @@ body{
 	}
 	#page3 .title{color:#fff;position: absolute;top: 70px;right:550px;}
 	#page3 .title a{display: block;position: relative;}
+
 
 
 /*page4*/

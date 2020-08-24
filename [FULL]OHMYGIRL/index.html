@@ -62,6 +62,36 @@
 				innerWidth: 1280,
 				innerHeight:720
 			});
+
+			//카운트다운
+			CountDownTimer('04/27/2020', 'countdown');
+			function CountDownTimer(dt, id){
+
+			var end = new Date(dt);
+
+			var _second = 1000;
+			var _minute = _second * 60;
+			var _hour = _minute * 60;
+			var _day = _hour * 24;
+			var timer;
+
+			function showRemaining() {
+			var now = new Date();
+			var distance = end - now;
+
+			var days = Math.floor(distance / _day);
+			var hours = Math.floor((distance % _day) / _hour);
+			var minutes = Math.floor((distance % _hour) / _minute);
+			var seconds = Math.floor((distance % _minute) / _second);
+
+			document.getElementById(id).innerHTML = days + ' : ';
+			document.getElementById(id).innerHTML += hours + ' : ';
+			document.getElementById(id).innerHTML += minutes + ' : ';
+			document.getElementById(id).innerHTML += seconds;
+			}
+
+			timer = setInterval(showRemaining, 1000);
+			}
 		});
 	</script>
 </head>
@@ -69,8 +99,21 @@
 	<div id="fullpage">
 		<section class="section" id="page1" data-anchor="a1st">
 			<video id="intro-MV" data-autoplay loop muted poster="images/bg-pg1.jpg">
-				<source src="nonstop-3840.mp4" type="video/mp4">
-			</video>					
+				<source src="Teaser-Nonstop.mp4" type="video/mp4">
+			</video>
+			<img src="images/BG.png" alt="" class="bgpage1">		
+			<div class="time">
+				<h2 id="countdown"></h2>
+			</div>	
+			<div class="bubbleWrap">
+				<div class="bubble b1"></div>
+				<div class="bubble b2"></div>
+				<div class="bubble b3"></div>
+				<div class="bubble b4"></div>
+				<div class="bubble b5"></div>
+				<div class="bubble b6"></div>
+				<div class="bubble b7"></div>
+			</div>				
 		</section>
 		<section class="section" id="page2" data-anchor="a2st">
 			<div class="main" id="onviewOne">
@@ -91,6 +134,15 @@
 		</section>
 		<section class="section" id="page3" data-anchor="a3st">
 			<div class="box"></div>
+			<div class="bubbleWrap">
+				<div class="bubble b1"></div>
+				<div class="bubble b2"></div>
+				<div class="bubble b3"></div>
+				<div class="bubble b4"></div>
+				<div class="bubble b5"></div>
+				<div class="bubble b6"></div>
+				<div class="bubble b7"></div>
+			</div>	
 			<div class="ladder">
 				<img src="images/ladder.png" alt="">
 			</div>
@@ -224,7 +276,7 @@
 							<p>이벤트<br>상세내용</p>
 						</div>
 					</a></li>
-					<li><a href="https://www.youtube.com/embed/obesWjbPUo0" class="youtube">
+					<li><a href="https://www.youtube.com/embed/iDjQSdN_ig8" class="youtube">
 						<img src="images/event02.png" alt="">
 						<div class="eventhover">
 							<p>뮤직비디오<br>보러가기</p>
