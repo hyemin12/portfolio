@@ -20,34 +20,143 @@ body{
 #onViewFour.move{top: 0;opacity:1;}
 
 /*page1*/
-#page1{width: 100%;height: 100%;overflow: hidden;position: relative;}
-#page1 #intro-MV{
-	width:100%;height: 100%;
-	position: absolute;top:00px;
-	object-fit: cover;
+#page1{
+	width: 100vw;height: 100vh;
+	overflow: hidden;position: relative;
+}
+	#page1 .trans{
+		width: 100vw;height: 100vh;
+		background: url(../images/grad.png);
+		background-size: cover;
+		position: absolute;top: 0;left: 0;
+		z-index:2;
+	}
+	#page1 #slick{
+		width: 100vw;height: 100vh;
+		position: relative;top: 0;left: 0;
+		overflow: hidden;
+	}
+	#page1 #slick div{
+		width: 100%;height: 100%;
+		
+		overflow:hidden;
+	}
+	#page1 #slick img{width:100%}
+	#page1 #slick .slide1{
+		background: url(../images/nonstop_teaser_dance2.jpg) center;
+		background-size: cover;
+	}
+	#page1 #slick .slide2{
+		background: url(../images/nonstop_teaser_dance3.jpg)center;
+		background-size: cover;
+	}
+	#page1 .logo{
+		width: 100px;height: 63px;
+		background: url(../images/omg-logo.png);
+		position: absolute;left: 100px;top: 30px;
+		text-indent: -9999px;z-index:10;
+	}
+	#page1 .logo a{display: block;line-height: 64px;}
 	
-}
-#page1 .bgpage1{
-	width: 100%;height: 100%;
-	background: url(../images/BG.png) no-repeat center;
-	background-size:cover;
-	position:relative;z-index: 1;
-}
-#page1 .bgpage1 img{width: 100%;}
+	#page1 .txtWrap{
+		color:#fff;
+		position: absolute;left: 14%;top: 30%;
+		z-index:3;
+	}
+	#page1 .txtWrap p{font-size:28px;}
+	#page1 .txtWrap h3{
+		font-size:68px;
+		font-family: 'S-CoreDream-7ExtraBold';
+		margin-bottom:10px;
+	}
+	#page1 .time{font-size:32px;}
 
-#page1 .time{
-	color:#765892;
-	font-family: 'S-CoreDream-7ExtraBold';font-size:25px;
-	position: absolute;bottom: 10%;right: 7%;
-	z-index: 2;
-}
-#page1 .icon{
-	width:350px;
-	position: absolute;left: 10%;bottom: 14%;
-	z-index:5;
-	animation:pgAni 0.8s infinite alternate;
-}
-#page1 .icon img{width: 100%;}
+	#page1 .scroll{
+		width: 25px;height: 40px;
+		border-radius:10px;
+		border: 1px solid #fff;
+		position: absolute;left: 50%;bottom: 10px;
+		transform:translateX(-50%);z-index:3;
+	}
+	#page1 .scroll:after{
+		content:"";display: block;
+		width: 3px;height: 7px;background: #fff;
+		border-radius:5px;
+		position: absolute;top:9px;left: 10px;
+		animation:rollMove 2s infinite;
+	}
+	@keyframes rollMove{
+		0% {
+	    opacity: 1;
+	    height: 8px;
+	  }
+	  20% {
+	    opacity: 1;
+	    height: 8px;
+	  }
+	  30% {
+	    transform: translateY(0);
+	    opacity: 1;
+	    height: 19px;
+	  }
+	  40% {
+	    opacity: 1;
+	  }
+	  80% {
+	    transform: translateY(19px);
+	    opacity: 0;
+	    height: 0;
+	  }
+	  81% {
+	    transform: translateY(0);
+	    opacity: 0;
+	    height: 8px;
+	  }
+	  100% {
+	    opacity: 1;
+	    height: 8px;
+	  }
+		}
+
+	#page1 .toggle{
+		width: 42px;height: 23px;
+		position:absolute;right:6%;top:65px;	
+		z-index: 10;cursor: pointer;
+	}
+	.toggle div{
+		width: 42px;height: 3px;background: #fff;
+		position: absolute;transition:.3s;
+	}
+	.toggle .bar1{top: -10px;}
+	.toggle .bar3{top:10px;}
+
+	.sChange .bar1{
+		top: 50%;left: 50%;
+		transform:translate(-50%,-50%) rotate(45deg);
+	}
+	.sChange .bar2{opacity: 0;}
+	.sChange .bar3{
+		top: 50%;left: 50%;
+		transform:translate(-50%,-50%) rotate(-45deg);
+	}
+
+	.menuWrap{
+		width: 100vw;height: 100vh;
+		background-color:rgba(200,200,200,0.9);
+		position: absolute;top: 0;left:100%;
+		z-index:4;
+	}
+	.menuWrap ul{
+		position: absolute;right: 6%;top: 130px;
+		text-align: right;
+	}
+	.menuWrap a{
+		display: block;
+		color:#fff;font-size:32px;
+		font-family: 'S-CoreDream-7ExtraBold';
+		margin-bottom: 10px;
+	}
+	.menuWrap a:hover{color:#8417c2;}
 
 /*page2*/
 #page2{background-image: url(../images/bg-pg2.jpg);position: relative;}
@@ -81,7 +190,7 @@ body{
 	#page2 .cardbody div.album{display: none;}
 
 	/*pageProfile*/
-	#pageProfile .bdProfile{width: 100%;height: 100%;background: #f3b0bb;}
+	#pageProfile .bdProfile{width: 100vw;height: 100vh;background: #f3b0bb;}
 	#pageProfile .bdProfile .logo{
 		width: 472px;padding-top: 90px;margin: 0 auto;margin-bottom:85px; 
 	}
@@ -118,7 +227,7 @@ body{
 
 	/*album*/
 	#pagealbum .album{
-		width: 100%;height: 100%;
+		width: 100vw;height: 100vh;
 		background-image: url(../images/bg-album.jpg);
 	}
 	#pagealbum .album .logo{
@@ -192,38 +301,22 @@ body{
 	
 
 /*page3*/
-#page3{background: #f397a5;position: relative;}
-	#page3 .box{
-		width: 100%;height: 130px;background: #28b5b6;
-		position: absolute;bottom: 0;
+#page3{position: relative;overflow:hidden;}
+	#page3 .bg{
+		width:100vw;height:100vh;
+		background: url(../images/mv.gif) no-repeat center;
+		background-size: cover;
 	}
-
-	#page3 .pad{width: 1010px;margin: 0 auto;position: relative;}
-	#page3 .pad .padimg{position: relative;}
-	#page3 .mvimg{
-		width: 900px;position: absolute;top: 50%;left: 50%;
-		transform:translate(-52%,-52%);
+	#page3 .icon{
+		position: absolute;left: 50%;top: 50%;
+		transform:translate(-50%,-50%);
+		z-index:10;
 	}
-	#page3 .mvimg img{width: 100%;position: relative;}
-	#page3 .bk{
-		width: 900px;height: 680px;background: #212120;
-		border-radius:30px;
-		position: absolute;top:-100px;left: 50%;
-		transform:translateX(-50%);
+	#page3 .icon:hover{
+		left: 50%;top: 50%;
+		transform:translate(-50%,-50%)scale(1.1);
+		transition: .3s;
 	}
-	#page3 .ladder{position: absolute;bottom: 220px;left: 180px;}
-	#page3 .cloud{position: absolute;bottom: 128px;}
-	#page3 .movingimg{
-		position: absolute;right: 160px;bottom: 50px;
-		animation: movingbear 2s infinite alternate;
-	}
-
-	@keyframes movingbear{
-		from{transform:translateX(150px);}
-		to{transform:translateX(0);}
-	}
-	#page3 .title{color:#fff;position: absolute;top: 70px;right:550px;}
-	#page3 .title a{display: block;position: relative;}
 
 
 
