@@ -9,14 +9,27 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/fullpage.css">
 	<link rel="stylesheet" href="css/font.css">
-	<link rel="stylesheet" href="css/colorbox.css">
 	<link rel="stylesheet" href="css/all.css">
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/jquery.fullPage.js"></script>
-	<script src="js/jquery.colorbox-min.js"></script>
+	<style>
+		#glayLayer{
+			width: 100%;height: 100%;background: #000;
+			position: fixed;top: 0;left: 0;
+			opacity:0.8;
+			display: none;
+		}
+		#overLayer{
+			position: fixed;top: 50%;left: 50%;
+			transform:translate(-50%,-50%);
+			display: none;
+		}
+		a.modal{width: 100%;height: 100%;}
+	</style>
 	<script>
 		$(function(){
-			$("#fullpage").fullPage();
+			$("#fullpage").fullpage();
+
 			$("#pageProfile").append("<div id='glayLayer'></div><div id='overLayer'></div>");
 
 			$("a.modal").click(function(e){
@@ -24,7 +37,6 @@
 				$("#glayLayer").show();
 				$("#overLayer").show().html("<img src='"+aHref+"'>");
 				return false;
-				// e.preventDefault();
 			});
 			$("#glayLayer,#overLayer").click(function(){
 				$("#glayLayer").hide();
@@ -44,8 +56,8 @@
 					<ul class="clearfix table">
 						<li class="tr">
 							<img src="images/pro01.jpg" alt="">
-							<div class="click"><a href="" class="modal">
-								<p>효정(최효정)</p>
+							<div class="click"><a href="images/p-hyojung.png"class="modal">
+								<p >효정(최효정)</p>
 							</a></div>
 						</li>
 						<li class="side">
@@ -59,8 +71,8 @@
 						</li>
 						<li class="tr td">
 							<img src="images/pro04.jpg" alt="">
-							<div class="click imgprofile"><a href="" class="modal">
-								<p>미미(김미현)</p>
+							<div class="click imgprofile"><a href="images/p-mimi.jpg" class="modal">
+								<p >미미(김미현)</p>
 							</a></div>
 						</li>
 						<li class="tr">
@@ -74,31 +86,31 @@
 						</li>
 						<li>
 							<img src="images/pro07.jpg" alt="">
-							<div class="click2 imgprofile"><a href="" class="modal">
+							<div class="click2 imgprofile"><a href="images/p-yooa.jpg" class="modal">
 								<p>유아(유시아)</p>
 							</a></div>
 						</li>
 						<li>
 							<img src="images/pro08.jpg" alt="">
-							<div class="click2 imgprofile"><a href="" class="modal">
+							<div class="click2 imgprofile"><a href="images/p-seunghee.jpg" class="modal">
 								<p>승희(현승희)</p>
 							</a></div>
 						</li>
 						<li>
 							<img src="images/pro09.jpg" alt="">
-							<div class="click2 imgprofile"><a href="" class="modal">
+							<div class="click2 imgprofile"><a href="images/p-jiho.jpg" class="modal">
 								<p>지호(김지호)</p>
 							</a></div>
 						</li>
 						<li>
 							<img src="images/pro10.jpg" alt="">
-							<div class="click2 imgprofile"><a href="" class="modal">
+							<div class="click2 imgprofile"><a href="images/p-binnie.png" class="modal">
 								<p>비니(배유빈)</p>
 							</a></div>
 						</li>
 						<li>
 							<img src="images/pro11.jpg" alt="">
-							<div class="click2 imgprofile"><a href="" class="modal">
+							<div class="click2 imgprofile"><a href="images/p-arin.jpg" class="modal">
 								<p>아린(최예원)</p>
 							</a></div>
 						</li>
