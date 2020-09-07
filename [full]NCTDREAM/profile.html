@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>NCT DREAM</title>
+	<!-- css -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="https://www.cssscript.com/demo/simple-typewriter-effect-pure-javascript-typewriterjs/typewriter.js"></script>
+	<script src="js/custom.js"></script>
+	<script>
+		$(function(){
+			//PROFILE 탭메뉴
+		    $("#profile .tab li").click(function(){
+		    	var i = $(this).index();
+		    	$("#profile .artist li").fadeOut().eq(i).fadeIn();
+		    	$("#profile .tab li").removeClass("active").eq(i).addClass("active");
+		    });
+		});
+	</script>
+</head>
+<body>
+	<section class="section" id="profile">
+		<div class="header">
+			<h1 class="logo"><a href="index.html">
+				<img src="images/logo-home.png" alt="nctdream">
+			</a></h1>
+			<div class="toggle">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div>
+		</div>			
+		<div class="nav">
+			<ul>
+				<li><a href="profile.html">NCT DREAM</a></li>
+				<li><a href="#a3st">DISCOGRAPHY</a></li>
+				<li><a href="">VIDEO</a></li>
+				<li><a href="">GALLERY</a></li>
+				<li><a href="">CONTENTS</a></li>
+				<li><a href="">NOTICE</a></li>
+				<li><a href="">SCHEDULE</a></li>
+			</ul>
+			<div class="copyright">
+				<p>Copyrightⓒ2020</p>
+				<p>SM ENTERTAINMENT Co., Ltd. All rights reserved</p>
+			</div>
+		</div>
+		<div class="tab">
+			<ul class="clearfix">
+				<li class="active">NCT DREAM</li>
+				<li >MARK</li>
+				<li>RENJUN</li>
+				<li>JENO</li>
+				<li>HAECHAN</li>
+				<li>JAEMIN</li>
+				<li>CHENLE</li>
+				<li>JISUNG</li>
+			</ul>
+		</div>
+		<div class="artist">
+			<ul>
+				<li>
+					<div class="prImg">
+						<img src="images/profile00.jpg" alt="">
+					</div>
+					<div class="artistName">
+						<p>NCT DREAM</p>
+						<span>CHEWING GUM ｜ 2016.08.25</span>
+						<div class="more">
+							<a href="#">
+								<strong>MORE <span class="arrow">→</span></strong>
+							</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="prImg">
+						<img src="images/profile01.jpg" alt="">
+					</div>
+					<div class="artistName">
+						<p>MARK</p>
+						<span>MARK ｜ 1999.08.02</span>
+					</div>
+				</li>
+				<li>
+					<div class="prImg">
+						<img src="images/profile02.jpg" alt="">
+					</div>
+					<div class="artistName">
+						<p>RENJUN</p>
+						<span>HUANG RENJUN ｜ 2000.03.23</span>
+					</div>
+				</li>
+				<li>
+					<div class="prImg">
+						<img src="images/profile03.jpg" alt="">
+					</div>
+					<div class="artistName">
+						<p>JENO</p>
+						<span>LEE JENO ｜ 2000.04.23</span>
+					</div>
+				</li>
+				<li>
+					<div class="prImg">
+						<img src="images/profile04.jpg" alt="">
+					</div>
+					<div class="artistName">
+						<p>HAECHAN</p>
+						<span>LEE DONGHYUK ｜ 2000.06.06</span>
+					</div>
+				</li>
+				<li>
+					<div class="prImg">
+						<img src="images/profile05.jpg" alt="">
+					</div>
+					<div class="artistName">
+						<p>JAEMIN</p>
+						<span>NA JAEMIN ｜ 2000.08.13</span>
+					</div>
+				</li>
+				<li>
+					<div class="prImg">
+						<img src="images/profile06.jpg" alt="">
+					</div>
+					<div class="artistName">
+						<p>CHENLE</p>
+						<span>ZHONG CHENLE ｜ 2001.11.22</span>
+					</div>
+				</li>
+				<li>
+					<div class="prImg">
+						<img src="images/profile07.jpg" alt="">
+					</div>
+					<div class="artistName">
+						<p>JISUNG</p>
+						<span>PARK JISUNG ｜ 2002.02.05</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>	
+</body>
+</html>

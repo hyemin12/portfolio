@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>NCT DREAM</title>
+	<!-- css -->
+	<link href="https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="https://www.cssscript.com/demo/simple-typewriter-effect-pure-javascript-typewriterjs/typewriter.js"></script>
+	<script>
+		$(function(){
+		//HOME 타이핑 애니메이션
+		var type = document.getElementById("typing");
+		var typewriter = new Typewriter(type,{loop:true});
+
+	    typewriter.typeString('#NCT DREAM')
+	    .pauseFor(1000)
+	    .deleteAll()
+	    .typeString('teen-aged unit of NCT')
+	    .pauseFor(1000)
+	    .deleteAll()
+	    .start();
+	})
+	</script>
+	<style>
+		body {font-family: 'Khand', sans-serif !important;font-weight:400;}
+
+		.bg {
+			width:100vw	;height: 100vh	;
+			background: url(images/0000.png) no-repeat center;
+			background-size: cover;
+			position: absolute;top: 0;left: 0;z-index:2;
+		}
+		.bg {
+			width:100vw	;height: 100vh	;
+			background: url(images/0002.png) no-repeat center;
+			background-size: cover;
+			position: absolute;top: 0;left: 0;z-index:2;
+		}
+		/*.bg img {width: 100%;}*/
+	</style>
+</head>
+<body>
+	<section class="section" id="home">
+		<div class="header">
+			<h1 class="logo"><a href="index.html" style="color:#fff;font-weight:500;z-index:10;">
+				<p id="typing"></p>
+			</a></h1>
+			<!-- <div class="toggle">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div> -->
+		</div>			
+		<div class="nav">
+			<ul>
+				<li><a href="profile.html">NCT DREAM</a></li>
+				<li><a href="#a3st">DISCOGRAPHY</a></li>
+				<li><a href="">VIDEO</a></li>
+				<li><a href="">GALLERY</a></li>
+				<li><a href="">CONTENTS</a></li>
+				<li><a href="">NOTICE</a></li>
+				<li><a href="">SCHEDULE</a></li>
+			</ul>
+			<div class="copyright">
+				<p>Copyrightⓒ2020</p>
+				<p>SM ENTERTAINMENT Co., Ltd. All rights reserved</p>
+			</div>
+		</div>
+		<div class="main_slide">
+			<div class="reload">
+				<video id="reloadVideo" class="video" autoplay muted loop>
+					<source src="video/reload_teaser.mp4" type="video/mp4">
+				</video>
+				<div class="opacity"></div>	
+			</div>
+			<div class="dreamshow">
+				<video id="dreamshowVideo" class="video" autoplay muted loop>
+					<source src="video/thedreamshow.mp4" type="video/mp4">
+				</video>
+				<div class="opacity"></div>	
+			</div>
+			<div class="boom">
+				<video id="boomVideo"class="video" autoplay muted loop>
+					<source src="video/boom2.mp4" type="video/mp4" >
+				</video>
+				<div class="opacity"></div>					
+			</div>
+		</div>
+		<div class="bg">
+			<!-- <img src="images/0000.png" alt=""> -->
+		</div>
+		<!-- <div class="sns">
+			<ul class="clearfix">
+				<li><a href="https://twitter.com/NCTsmtown_DREAM" target="_blank">트위터</a></li>
+				<li><a href="https://www.instagram.com/nct_dream/" target="_blank">인스타그램</a></li>
+				<li><a href="https://weibo.com/NCTDREAMsmtown?nick=NCT_DREAM" target="_blank">웨이보</a></li>
+				<li><a href="https://www.youtube.com/channel/UCXURHJRGr4-EB3l87kcbElw" target="_blank">드림유투브</a></li>
+				<li><a href="https://channels.vlive.tv/DB547B/home" target="_blank">브이앱</a></li>
+			</ul>
+		</div> -->
+	</section>
+	<section class="section" id="home">
+		<div class="header">
+			<h1 class="logo"><a href="index.html" style="color:#fff;font-weight:500;z-index:10;">
+				<p id="typing"></p>
+			</a></h1>
+			<!-- <div class="toggle">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div> -->
+		</div>			
+		<div class="nav">
+			<ul>
+				<li><a href="profile.html">NCT DREAM</a></li>
+				<li><a href="#a3st">DISCOGRAPHY</a></li>
+				<li><a href="">VIDEO</a></li>
+				<li><a href="">GALLERY</a></li>
+				<li><a href="">CONTENTS</a></li>
+				<li><a href="">NOTICE</a></li>
+				<li><a href="">SCHEDULE</a></li>
+			</ul>
+			<div class="copyright">
+				<p>Copyrightⓒ2020</p>
+				<p>SM ENTERTAINMENT Co., Ltd. All rights reserved</p>
+			</div>
+		</div>
+		<div class="main_slide">
+			<div class="reload">
+				<video id="reloadVideo" class="video" autoplay muted loop>
+					<source src="video/reload_teaser.mp4" type="video/mp4">
+				</video>
+				<div class="opacity"></div>	
+			</div>
+			<div class="dreamshow">
+				<video id="dreamshowVideo" class="video" autoplay muted loop>
+					<source src="video/thedreamshow.mp4" type="video/mp4">
+				</video>
+				<div class="opacity"></div>	
+			</div>
+			<div class="boom">
+				<video id="boomVideo"class="video" autoplay muted loop>
+					<source src="video/boom2.mp4" type="video/mp4" >
+				</video>
+				<div class="opacity"></div>					
+			</div>
+		</div>
+		<div class="bg1">
+			<!-- <img src="images/0000.png" alt=""> -->
+		</div>
+		<!-- <div class="sns">
+			<ul class="clearfix">
+				<li><a href="https://twitter.com/NCTsmtown_DREAM" target="_blank">트위터</a></li>
+				<li><a href="https://www.instagram.com/nct_dream/" target="_blank">인스타그램</a></li>
+				<li><a href="https://weibo.com/NCTDREAMsmtown?nick=NCT_DREAM" target="_blank">웨이보</a></li>
+				<li><a href="https://www.youtube.com/channel/UCXURHJRGr4-EB3l87kcbElw" target="_blank">드림유투브</a></li>
+				<li><a href="https://channels.vlive.tv/DB547B/home" target="_blank">브이앱</a></li>
+			</ul>
+		</div> -->
+	</section>
+</body>
+</html>

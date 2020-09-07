@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+/*reset*/
+* {padding: 0;margin: 0;box-sizing:border-box;}
+a:link, a:visited {color:#000;text-decoration: none;}
+li {list-style:none;}
+.clearfix:after {content:"";display:block;clear:both;}
+img {display: block;}
+body {font-family: 'Khand', sans-serif !important;}
+/*<!------ reset ------>*/
+
+
+/*section*/
+.section {width: 100vw;height: 100vh;overflow:hidden;}
+.section .header {width: 100vw;height: 40px;z-index:10;position: absolute;}
+.section .header .logo {position:absolute;top: 50px;left: 50px;}
+
+/*toggle*/
+.section .header .toggle {position: absolute;right: 50px;top: 50px;width: 42px;height: 30px;}
+.section .header .toggle div {width: 42px;height: 4px;background: #fff;position: absolute;left: 0;top: 0;transition:.3s;cursor:pointer;}
+.section .header .toggle div.bar2 {top: 12px;} 
+.section .header .toggle div.bar3 {top: 24px;}
+.section .header .toggle.change div.bar1 {top: 50%;left: 50%;transform:translate(-50%,-50%)rotate(45deg);}
+.section .header .toggle.change div.bar2 {opacity: 0;}
+.section .header .toggle.change div.bar3 {top: 50%;left: 50%;transform:translate(-50%,-50%)rotate(-45deg);}
+
+/*nav*/
+.section .nav {width: 100vw;height: 100vh;background: rgba(0,0,0,0.9);position: relative;top: 0;left: 100%;z-index:9;}
+.section .nav>ul {text-align: right;position: absolute;right: 50px;top: 120px;}
+.section .nav>ul>li {font-size:24px;margin-bottom: 5px;}
+.section .nav>ul>li:nth-child(5) {margin-bottom: 40px;}
+.section .nav>ul>li>a{display: block;color:#fff;}
+.section .nav>ul>li>a:hover {color:#bfd824;}
+.section .nav .copyright {color:#ddd;font-size:12px;position: absolute;left: 50px;bottom: 50px;}
+
+/*sns*/
+.section .sns {position: absolute;bottom: 30px;right: 50px;z-index: 10;}
+.section .sns li{float: left;width: 40px;height: 40px;background: url(../images/sns.png) no-repeat;margin-left: 10px;text-indent:-9999px;}
+.section .sns li:nth-child(1) {background-position: 0 0;}
+.section .sns li:nth-child(2) {background-position: -47px 0;}
+.section .sns li:nth-child(3) {background-position: -94px 0;}
+.section .sns li:nth-child(4) {background-position: -141px 0;}
+.section .sns li:nth-child(5) {background-position: -187px 0;}
+.section .sns li a{display: block;line-height: 40px;}
+
+
+/* HOME == index.html */
+#home {width: 100vw;height: 100vh;overflow:hidden;}
+
+/*mainslide*/
+#home .main_slide {width: 100vw;height: 100vh;overflow:hidden;position:absolute;top: 0;left: 0;}
+#home .main_slide>div {width: 100vw;height: 100vh;position: absolute;top: 0;left: 100%;}
+#home .main_slide>div:first-child {left: 0;} 
+#home .video {width: 100vw;height:100vh;object-fit:cover;position: absolute;top: 0;left: 0;}
+#home .opacity {width: 100vw;height: 100vh;background: rgba(0,0,0,0.4);position: absolute;top: 0;left: 0;}
+
+/*home Typing*/
+#home .txtWrap {position: absolute;left: 160px;top: 230px;color:#fff;}
+#home .txtWrap h3 {font-size:60px;font-weight:700;line-height:75px;margin-bottom: 5px;}
+#home .txtWrap p#typing1 {font-size:20px;font-weight: 400;margin-bottom: 50px;}
+#home .txtWrap p#typing2 {font-size:24px;margin-bottom: 5px;}
+#home .txtWrap p#typing3 {font-size:14px;}
+/*<!------ home ------>*/
+
+
+/*profile == profile.html*/
+#profile {width: 100vw;height: 100vh;background: #1e0908;overflow:hidden;}
+
+/*tab*/
+#profile .tab {position: absolute;top: 150px;right: 150px;cursor: pointer;z-index: 8;}
+#profile .tab li {float: left;color:#999;margin-left: 20px;}
+#profile .tab li.active {color:#bfd824;}
+#profile .tab li:hover {color:#bfd824;}
+
+/*tab menu body*/
+#profile .artist {}
+#profile .artist li{display: none;}
+#profile .artist li:first-child {display: block;}
+#profile .artist li .prImg {width: 830px;height:auto;position: absolute;top: 190px;right: 150px;}
+#profile .artist li .prImg img {width: 100%;}
+#profile .artist li .artistName {color:#fff;position: absolute;left: 160px;top: 270px;z-index: 5;}
+#profile .artist li .artistName p {font-size:60px;font-weight: 800;margin-bottom:5px;}
+#profile .artist li .artistName p:before {content:"";display: block;width: 47px;height: 10px;background: #fff;margin-bottom:35px;}
+
+/*tab menu more-btn*/
+#profile .more {width: 60px;position: relative;top: 70px;}
+#profile .more a {display: block;color:#777;font-size:14px;}
+#profile .more span.arrow {opacity:0;transition:.3s;}
+#profile .more:hover span.arrow{opacity:1;}
+#profile .more:hover a{color:#bfd824;}
+/*<!------ profile ------>*/
+
+/*1920px*/
+@media screen and (max-width:1700px){
+
+}
