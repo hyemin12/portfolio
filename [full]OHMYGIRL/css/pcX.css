@@ -111,27 +111,27 @@ body{
 	#pageProfile .bdProfile .decodice2{
 		position: absolute;top: 280px;left: 570px;
 	}
-	#pageProfile ul.table{
+	#pageProfile ul.board{
 		width: 1200px;height: 520px;margin: 0 auto;
 		position: relative;
 	}
-	#pageProfile .table li{
+	#pageProfile .board li{
 		float: left; width: 159.6px;overflow:hidden;
 		position: relative;transition:.3s;
 	}
-	#pageProfile .table li a{color:#fff;}
-	#pageProfile .table li img{width: 100%;transition:.3s}
-	#pageProfile .table li.tr{width: 194px !important;height: 158px !important;}
-	#pageProfile .table li.side{width: 798px !important;height: 316px !important;}
-	#pageProfile .table li.rec{width: 194px !important;height:194px !important;}
-	#pageProfile .table li.td{position: absolute;top: 158px;}
+	#pageProfile .board li a{color:#fff;}
+	#pageProfile .board li img{width: 100%;transition:.3s}
+	#pageProfile .board li.tr{width: 194px !important;height: 158px !important;}
+	#pageProfile .board li.side{width: 798px !important;height: 316px !important;}
+	#pageProfile .board li.rec{width: 194px !important;height:194px !important;}
+	#pageProfile .board li.td{position: absolute;top: 158px;}
 
 
-	#pageProfile .table li:hover img{transform:scale(1.1);}
-	#pageProfile .table li:hover .click,
-	#pageProfile .table li:hover .click2,
-	#pageProfile .table li:hover .click3{display: block;opacity: 1;}
-	#pageProfile .table li:nth-child(2):hover img{transform:scale(1);}
+	#pageProfile .board li:hover img{transform:scale(1.1);}
+	#pageProfile .board li:hover .click,
+	#pageProfile .board li:hover .click2,
+	#pageProfile .board li:hover .click3{display: block;opacity: 1;}
+	#pageProfile .board li:nth-child(2):hover img{transform:scale(1);}
 	#pageProfile .click p{
 		width: 120px;color:#fff;
 		position: absolute;left: 50%;top: 50%;		
