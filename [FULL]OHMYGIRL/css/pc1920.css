@@ -218,12 +218,68 @@ body{
 		position: absolute;top: 130px;left: 540px;
 		animation: rolling 6s linear infinite;
 	}
-	#pageProfile ul.table{width: 1412px;}
-	#pageProfile .table li{float: left;width: 190px;height: 230px;}
+	#pageProfile ul.table{width: 1412px;position: relative;}
+	#pageProfile .table li{
+		float: left;width: 190px;height: 230px;
+		overflow:hidden;position: relative;transition:.3s;
+	}
+	#pageProfile .table li a{color:#fff;}
 	#pageProfile .table li.tr{width: 230px !important;height: 190px !important;}
 	#pageProfile .table li.side{width: 950px !important;height: 380px !important;}
 	#pageProfile .table li.rec{width: 230px !important;height: 230px !important;}
 	#pageProfile .table li.td{position: absolute;top: 190px;}
+
+	#pageProfile .table li:hover img{transform:scale(1.1);transition:0.5s}
+	#pageProfile .table li.rec:hover img{transform:scale(1)}
+	#pageProfile .table li:hover .click,
+	#pageProfile .table li:hover .click2,
+	#pageProfile .table li:hover .click3{display: block;opacity: 1;}
+	#pageProfile .table li:nth-child(2):hover img{transform:scale(1);}
+	#pageProfile .click p{
+		width: 120px;color:#fff;
+		position: absolute;left: 50%;top: 50%;		
+		transform:translate(-50%,-50%);
+	}
+	#pageProfile .click{
+		width: 230px;height: 190px;
+		background-color:rgb(0,0,0,0.6);color:#fff;
+		text-align: center;
+		position: absolute;top: 0;left: 0;
+		opacity: 0;
+	}
+	#pageProfile .click2{
+		width: 190px;height: 230px;
+		background-color:rgb(0,0,0,0.6);color:#fff;
+		text-align: center;line-height: 194px;
+		position: absolute;top: 0;left: 0;
+		opacity: 0;
+	}
+	#pageProfile .click3{
+		width: 230px;height: 230px;
+		background-color:rgb(0,0,0,0.6);color:#fff;
+		text-align: center;
+		position: absolute;top: 0;left: 0;
+		opacity: 0;
+	}
+	#pageProfile .click3 p{
+		position: absolute;left: 50%;top: 50%;		
+		transform:translate(-50%,-50%);
+	}
+	#pageProfile .click a{
+		display: block;color:#fff;
+	}
+	
+	#glayLayer{
+		width: 100%;height: 100%;background: #000;
+		position: fixed;top: 0;left: 0;
+		opacity:0.6;
+		display: none;
+	}
+	#overLayer{
+		position: fixed;top: 50%;left: 50%;
+		transform:translate(-50%,-50%);
+		display: none;
+	}
 
 	/*album*/
 	#pagealbum .album{
